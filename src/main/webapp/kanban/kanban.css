@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    outline: 0;
+    transition: border-color .3s, color .3s, background-color .3s, box-shadow .3s;
+}
+
+body {
+    background-color: #000019;
+}
+
+#add_column {
+    order: 999;
+}
+
+input {
+    height: 22px;
+    border-radius: 4px;
+    padding: 4px 8px;
+    background-color: #151d32;
+    border: solid #727278 1px;
+    color: #e8e8eb;
+}
+
+input:focus {
+    border-color: #bfbfc6;
+    background-color: #25304a;
+}
+
+.delete-button {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+}
+
+#container {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    background-color: #151d32;
+    border: solid #727278 1px;
+    color: #e8e8eb;
+    height: fit-content;
+    width: 300px;
+
+    border-radius: 4px;
+    padding: 4px 8px;
+    gap: 6px;
+}
+
+.column div {
+    border-radius: 4px;
+    border: solid #727278 1px;
+    background-color: #202b49;
+    padding: 4px;
+}
+
+.column div:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 5px 1px rgba(255,255,255,.4); 
+    box-shadow: 0 0 5px 1px rgba(255,255,255,.4);
+}
+
+.column h3 {
+    margin-bottom: 4px;
+}
+
+.column > form {
+    order: 999;
+}
+
+.column .issue-input {
+    width: calc(100% - 16px);
+    margin-bottom: 6px;
+}
+
+.minimized .hidden-in-min {
+    display: none;
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255,255,255,.4);
+    z-index: 10;
+}
+
+.popup .content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 640px;
+    padding: 12px 16px;
+    z-index: 20;
+    background-color: #202b49;
+    border: solid #727278 1px;
+    color: #e8e8eb;
+    border-radius: 8px;
+}
+
+.popup .content #popup_close {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.popup .content #popup_close:hover {
+    cursor: pointer;
+}
+
+.popup .content #title {
+    width: 90%;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.popup .content #description {
+    width: 604px;
+    height: 280px;
+    text-align: justify;
+    overflow: hidden;
+    resize: none;
+    margin-top: 12px;
+
+    border-radius: 4px;
+    padding: 4px 8px;
+    background-color: #151d32;
+    border: solid #727278 1px;
+    color: #e8e8eb;
+}
+
+.popup .content #description:focus {
+    border-color: #bfbfc6;
+    background-color: #25304a;
+}
+
+.popup .content .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 8px;
+    gap: 8px;
+}
+
+.popup .content .actions button {
+    flex-grow: 1;
+    height: 28px;
+    font-size: 1em;
+    font-weight: bold;
+    border: solid rgba(255,255,255,.4) 1px;
+    color: #e8e8eb;
+}
+
+#save_issue {
+    background-color: rgb(6, 94, 6);
+}
+
+#delete_issue {
+    background-color: rgb(94, 6, 6);
+}
+
+.hidden {
+    display: none;
+}

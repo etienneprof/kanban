@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="kanban.js" defer></script>
+    <link rel="stylesheet" href="kanban.css">
+</head>
+<body>
+    <div id="container">
+
+        <form id="add_column">
+            <input type="text" id="new_column_label" placeholder="Add a new column">
+        </form>
+    </div>
+
+    <div id="popup" class="popup hidden">
+        <div class="content">
+            <p id="popup_close">&#10006;</p>
+            <input type="hidden" id="issue_id">
+            <input type="text" id="title" value="Some placeholder title">
+            <textarea id="description">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eius, nemo ipsam velit odio optio magni iure quas rem modi architecto at ipsa animi ea, inventore voluptas, temporibus atque perspiciatis.
+Itaque iste facere aliquid cum enim eius tenetur id suscipit tempora? Sint temporibus excepturi ad aliquam nobis velit asperiores voluptatibus id rem minima error animi, eius facilis consequatur non ipsum?
+            </textarea>
+            <div class="actions">
+                <button id="save_issue">Save</button>
+                <button id="delete_issue">Delete</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
